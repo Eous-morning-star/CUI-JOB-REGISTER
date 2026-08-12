@@ -390,7 +390,7 @@ function deriveScaffoldStatus(row){
   if(row.erectedDate) return 'Erected';
   return 'Pending';
 }
-const NPS_DIAMETER = {'1':0.033,'2':0.060,'3':0.088,'4':0.114,'5':0.141,'6':0.17,'8':0.22,'10':0.27,'12':0.32,'14':0.36,'16':0.41,'18':0.46,'20':0.51};
+const NPS_DIAMETER = {'1':0.033, '1.5':0.047,'2':0.060,'2.5':0.075,'3':0.088,'4':0.114,'5':0.141,'6':0.17,'8':0.22,'10':0.27,'12':0.32,'14':0.36,'16':0.41,'18':0.46,'20':0.51};
 function lookupDiameter(getRaw){ return NPS_DIAMETER[getRaw('nomSize')] || 0; }
 
 const INSULATION_FIELDS = [
