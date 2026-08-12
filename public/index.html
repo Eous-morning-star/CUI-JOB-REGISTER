@@ -406,7 +406,7 @@ const INSULATION_FIELDS = [
   {id:'pipeLength', label:'Pipe Length (m)', type:'number'},
   {id:'specThk', label:'Insulation Thk — Spec (mm)', type:'number'},
   {id:'fieldThk', label:'Insulation Thk — Field (mm)', type:'select', blankOption:true,
-    options:['25','30','35','40','45','50','55','60','65','70','75','80','85','90','95','100']},
+    options:['15','20','25','30','35','40','45','50','55','60','65','70','75','80','85','90','95','100']},
   {id:'twiceThk', label:'2× Thickness (m)', type:'computed', decimals:4,
     computeFrom:['fieldThk'],
     computeFn:(get)=> 2*get('fieldThk')/1000},
@@ -429,7 +429,7 @@ const INSULATION_FIELDS = [
       const area = Math.round(rawArea*100)/100; // match the displayed Insulation Area value exactly
 
       let rate = 0;
-      if(thk === 25) rate = 15500;
+      if(thk >= 10 && thk <= 25) rate = 15500;
       else if(thk >= 30 && thk <= 50) rate = 16500;
       else if(thk >= 55 && thk <= 75) rate = 17500;
       else if(thk >= 80 && thk <= 100) rate = 18500;
