@@ -399,7 +399,7 @@ const INSULATION_FIELDS = [
   {id:'priority', label:'Priority', type:'number'},
   {id:'lineNo', label:'Line No.', type:'text'},
   {id:'nomSize', label:'Nom. Size (inch)', type:'select', blankOption:true,
-    options:['1','2','3','4','5','6','8','10','12','14','16','18','20']},
+    options:['1','1.5','2','2.5','3','4','5','6','8','10','12','14','16','18','20']},
   {id:'diameter', label:'Diameter (m)', type:'computed', decimals:3,
     computeFrom:['nomSize'],
     computeFn:(getVal, getRaw)=> lookupDiameter(getRaw)},
